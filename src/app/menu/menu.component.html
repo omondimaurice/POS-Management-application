@@ -1,0 +1,14 @@
+<header>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<ul class="navbar-nav">
+<li><a *ngIf="isUserLogin" class="nav-link"><img src="/assets/images/Ts.jpg" width="50" height="40"></a></li>
+<li><a *ngIf="isUserLogin" routerLink="/welcome/maurice" class="nav-link">Home</a></li>
+<li><a *ngIf="isUserLogin" routerLink="/pos-list" class="nav-link">Pos List</a></li>
+<li><a *ngIf="isUserLogin" routerLink="/sales" class="nav-link">Sales</a></li>
+</ul>
+<ul class="navbar-nav navbar-collapse justify-content-end">
+<li><a *ngIf="! isUserLogin" routerLink="/login" class="nav-link">Login</a></li>
+<li><a  *ngIf="isUserLogin" routerLink="/logout" class="nav-link">Logout</a></li>
+</ul>
+</nav>
+</header>

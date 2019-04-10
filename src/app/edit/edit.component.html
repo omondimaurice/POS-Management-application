@@ -1,0 +1,31 @@
+    <div class="container">
+
+
+    <h3>Update POS details</h3>
+
+
+    <fieldset class="form-group">
+    <label>Serial Number</label>
+    <input type="text" class="form-control" [(ngModel)]="pos.serialNumber" name="serialNumber" required="required">
+    </fieldset  >
+
+    <fieldset class="form-group" >
+    <label>Make</label>
+    <input type="text" class="form-control" [(ngModel)]="pos.make" name="make" required="required" >
+    </fieldset>
+
+    <fieldset class="form-group">
+    <label> Owner</label>
+    <input type="text" class="form-control" [(ngModel)]="pos.owner" name="owner" required="required"> 
+    </fieldset>
+
+    <fieldset class="form-group">
+    <label>Timestamp</label>
+    <input type="date" class="form-control" [ngModel]="pos.timestamp | date:'yyyy-MM-dd' " (ngModelChange)="pos.timestamp = $event" name ="timestamp" required="required">
+    </fieldset>
+
+    <button class="btn btn-success" name="update" (click)="savePos()">
+    save
+    </button>
+    </div>
+

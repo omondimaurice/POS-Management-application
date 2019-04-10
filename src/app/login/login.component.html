@@ -1,0 +1,66 @@
+<!-- <h2>Login</h2>
+<div class="container">
+<div class="alert alert-warning" *ngIf='invalidlogn'>{{errormessage}}</div>
+<div>
+Username: <input type="text" name="username"  [(ngModel)]="username" />
+Password:<input type="password" name="password" [(ngModel)]="password">
+<div>
+<button (click)=handleLogin() class="btn btn-success">Login</button>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+-->
+<!--
+<div id="fullscreen_bg" class="fullscreen_bg">
+<div class="container">
+<div><h1><marquee behavior="alternate"><img src="assets/images/Ts.jpg"  height="50" width="50"alt="POS image"> POS   monitor system</marquee></h1></div>
+	<form class="form-signin">
+		<div><h1 class="form-signin-heading text-muted">Sign In</h1></div>
+        <div class="alert alert-warning" *ngIf='invalidlogn'>{{errormessage}}</div>
+		<input type="text" class="form-control" placeholder="username" required="" autofocus=""  [(ngModel)]="username" >
+		<input type="password" class="form-control" placeholder="Password" required=""  [(ngModel)]="password" >
+    
+		<button (click)=handleLogin() class="btn btn-lg btn-primary btn-block" type="submit">
+			Login
+		</button>
+	</form>
+
+</div>
+-->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div><h4><marquee behavior="alternate"><img src="assets/images/Ts.jpg"  height="50" width="50"alt="POS image"> Your Payment Partner</marquee></h4></div>
+<div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div class="box">
+                    <div class="shape1"></div>
+                    <div class="shape2"></div>
+                    <div class="shape3"></div>
+                    <div class="shape4"></div>
+                    <div class="shape5"></div>
+                    <div class="shape6"></div>
+                    <div class="shape7"></div>
+                    <div class="float">
+                    
+                        <form class="form" action="">
+                        <div class="alert alert-warning" *ngIf='invalidlogn'>{{errormessage}}</div>
+                            <div class="form-group">
+                                <label for="username" class="text-white">Username:</label><br>
+                                <input type="text" name="username" id="username" class="form-control" [(ngModel)]="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-white">Password:</label><br>
+                                <input type="text" name="password" id="password" class="form-control"  [(ngModel)]="password" >
+                            </div>
+                            <div class="form-group">
+                                <input (click)=handleLogin() type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

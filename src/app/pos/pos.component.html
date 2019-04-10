@@ -1,0 +1,33 @@
+<h1 >POS</h1>
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+<div class="container">
+<table datatable class="row-border hover">
+<thead>
+<tr>
+<th>serialNumber</th><th>make</th><th>owner</th><th>timestamp</th><th>update</th><th>delete</th>
+</tr>
+</thead>
+
+
+<tbody>
+        <tr *ngFor="let pos of poss">
+              <td>{{pos.serialNumber}}</td>
+
+              <td>{{pos.make}}</td>
+
+              <td>{{pos.owner}}</td>
+
+              <td>{{pos.timestamp| date}}</td>
+              <td><button (click)="updatePos(pos.id)" class="btn btn-success"><font color="red">Update </font></button></td>
+              <td><button (click)="deletePos(pos.id)" class="btn btn-warning"><font color="red">Delete POS </font></button></td>
+              
+              
+<tr>
+
+
+</tbody>
+</table>
+<div class="row">
+<button class="btn btn-success" (click)="addPos()">Add POS</button>
+</div>
+</div>
