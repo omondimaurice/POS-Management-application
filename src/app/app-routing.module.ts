@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'welcome/:name', component: WelcomeComponent, canActivate: [RouteguardserviceService] },
  { path: 'pos-list', component: PosComponent, canActivate: [RouteguardserviceService] },
  { path: 'pos-list/:id', component: EditComponent, canActivate: [RouteguardserviceService] },
- 
+ { path: '/sales', component: EditComponent, canActivate: [RouteguardserviceService] },
   { path: 'logout', component: LogoutComponent ,canActivate:[RouteguardserviceService]},
   { path: '**', component: ErrorComponent }
 ];

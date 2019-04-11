@@ -1,0 +1,60 @@
+<h6>Create Pos:</h6>
+<form (ngSubmit)="onSubmit()" #posForm="ngForm">
+  <div class="form-row">
+    <div class="col-auto">
+        <input 
+          type="text" 
+          class="form-control" 
+          placeholder="Description"
+          id="description"
+          [(ngModel)]="model.description"
+          name="description"
+          #description="ngModel">
+    </div>
+    <div class="col-auto">
+      <input 
+        type="text" 
+        class="form-control" 
+        placeholder="Responsible"
+        id="responsible"
+        [(ngModel)]="model.responsible"
+        name="responsible"
+        #responsible="ngModel">
+    </div>
+
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+
+  </div>
+</form>
+
+
+<br />
+
+
+<h6>Pos List:</h6>
+
+<div *ngIf="(posar | async)?.length!=0">
+
+<table class="table">
+
+  <thead class="thead-inverse">
+
+    <tr>
+      <th>#</th>
+      <th>Pos serialNumber</th>
+      <th>make</th>
+      <th>Owner</th>
+      <th>timestamp</th>
+      <th></th>
+    </tr>
+    
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of posar | async">
+      <td><button class="btn btn-primary" (click)="removePos(p)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>

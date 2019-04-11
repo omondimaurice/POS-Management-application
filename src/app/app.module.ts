@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Directive } from '@angular/core';
 import {FormsModule } from '@angular/forms'
 import{ HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,11 @@ import { FooterComponent } from './footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';
 import { EditComponent } from './edit/edit.component';
 import { DataTablesModule } from 'angular-datatables';
+import { TodoOverviewComponent } from './todo-overview/todo-overview.component';
+import { TodoLisComponent } from './todo-lis/todo-lis.component';
+import { NgRedux, NgReduxModule } from '@angular-redux/store';
+import { IAppState, rootReducer, INITIAL_STATE } from './store';
+
 
 @NgModule({
   declarations: [
@@ -25,16 +30,25 @@ import { DataTablesModule } from 'angular-datatables';
     FooterComponent,
     LogoutComponent,
     EditComponent,
-
+    TodoOverviewComponent,
+    TodoLisComponent,
+    NgReduxModule,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    DataTablesModule
+    DataTablesModule,
+    NgReduxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor (ngRedux: NgRedux<IAppState>) {
+    ngRedux.configureStore(rootReducer, INITIAL_STATE);
+}
+
+
+ }
